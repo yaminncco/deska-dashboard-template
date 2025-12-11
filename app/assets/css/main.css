@@ -210,7 +210,7 @@
 .page-leave-active {
   transition: opacity 300ms;
 }
-.page-enter,
+.page-enter-from,
 .page-leave-to {
   opacity: 0;
 }
