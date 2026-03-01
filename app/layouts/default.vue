@@ -1,15 +1,13 @@
 <template>
   <SidebarProvider
-    class="relative"
+    class="relative md:[&:has([data-variant=inset])_main>header]:rounded-t-xl"
     :default-open="defaultOpen"
-    :style="[
-      {
-        '--app-sidebar-accent': 'color-mix(in oklab, var(--accent) 60%, var(--background))',
-      },
-      color === 'accent' && variant === 'inset' ? {
+    :style="{
+      '--app-sidebar-accent': 'color-mix(in oklab, var(--accent) 60%, var(--background))',
+      ...(color === 'accent' && variant === 'inset' && {
         '--sidebar': 'var(--app-sidebar-accent)',
-      }: {},
-    ]"
+      }),
+    }"
   >
     <LayoutSidebar
       :color="color"
@@ -17,12 +15,12 @@
     />
     <SidebarInset
       :class="[
-        'bg-background text-foreground overflow-hidden',
+        'bg-background text-foreground',
         color !== 'accent' && 'md:peer-data-[variant=inset]:border',
       ]"
     >
       <Header />
-      <div class="grow">
+      <div class="grow overflow-hidden">
         <slot />
       </div>
       <Footer />
