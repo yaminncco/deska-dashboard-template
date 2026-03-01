@@ -2,36 +2,34 @@
   <div v-if="status === 'pending' && !data.length">
     <DashboardChartSkeleton />
   </div>
-  <div
+  <DashboardChartCard
     v-else
-    class="relative"
+    class="relative overflow-hidden"
   >
+    <template #header>
+      <div>
+        <p class="mb-1 text-sm font-medium text-muted-foreground">
+          Revenue
+        </p>
+        <p class="text-3xl font-semibold">
+          {{ formatCurrency(total) }}
+        </p>
+      </div>
+    </template>
     <ProgressIndeterminate
       v-if="status === 'pending'"
-      class="absolute"
+      class="absolute top-0 inset-0"
     />
-    <DashboardChartCard>
-      <template #header>
-        <div>
-          <p class="mb-1 text-sm font-medium text-muted-foreground">
-            Revenue
-          </p>
-          <p class="text-3xl font-semibold">
-            {{ formatCurrency(total) }}
-          </p>
-        </div>
-      </template>
-      <AreaChart
-        :data="data"
-        index="date"
-        :categories="['amount']"
-        :x-formatter="xTicksFormatter"
-        :custom-tooltip="customTooltip({ period })"
-        :show-y-axis="false"
-        :show-legend="false"
-      />
-    </DashboardChartCard>
-  </div>
+    <AreaChart
+      :data="data"
+      index="date"
+      :categories="['amount']"
+      :x-formatter="xTicksFormatter"
+      :custom-tooltip="customTooltip({ period })"
+      :show-y-axis="false"
+      :show-legend="false"
+    />
+  </DashboardChartCard>
 </template>
 
 <script lang="ts" setup>

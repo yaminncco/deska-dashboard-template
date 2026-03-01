@@ -1,23 +1,14 @@
 <template>
-  <div class="w-full h-[4px] overflow-hidden rounded-md">
-    <div class="w-full h-full rounded-md indicator" />
+  <div :class="cn('w-full h-[4px] overflow-hidden rounded-md [--indicator:25%]', props.class)">
+    <div class="w-full h-full animate-indeterminate-progress bg-size-[200%_100%] bg-position-[0%] bg-[linear-gradient(90deg,var(--primary)_calc(var(--indicator)/2),transparent_calc(var(--indicator)/2))]" />
   </div>
 </template>
 
-<style scoped>
-.indicator {
-  animation: indeterminate-progress-bar 1400ms infinite linear;
-  background-position-x: 0%;
-  background-size: 200% 100%;
-  background-image: linear-gradient(90deg, var(--primary) 12.5%, transparent 12.5%)
-}
+<script lang="ts" setup>
+import type { HTMLAttributes } from 'vue'
+import { cn } from '@/utils/lib/utils'
 
-@keyframes indeterminate-progress-bar {
-  0% {
-    background-position-x: 25%;
-  }
-  80%, 100% {
-    background-position-x: -105%;
-  }
-}
-</style>
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
+</script>
