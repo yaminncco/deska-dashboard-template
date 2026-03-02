@@ -15,7 +15,7 @@
     />
     <SidebarInset
       :class="[
-        'bg-background text-foreground',
+        'min-w-0 bg-background text-foreground',
         color !== 'accent' && 'md:peer-data-[variant=inset]:border',
       ]"
     >
