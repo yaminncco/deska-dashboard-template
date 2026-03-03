@@ -1,9 +1,9 @@
 <template>
-  <footer class="py-6 text-sm border-t shrink-0 text-muted-foreground">
+  <footer class="border-t shrink-0 text-muted-foreground">
     <h2 class="sr-only">
       Footer
     </h2>
-    <div class="w-full px-4 mx-auto sm:px-6 lg:px-8 max-w-9xl">
+    <ContainerWrapper class="py-6">
       <div class="flex flex-col text-xs">
         <div>
           © {{ $config.public.siteName || '%siteName' }} {{ currentYear }}
@@ -25,7 +25,7 @@
           </ul>
         </nav>
       </div>
-    </div>
+    </ContainerWrapper>
   </footer>
 </template>
 

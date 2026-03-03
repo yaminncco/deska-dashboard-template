@@ -6,38 +6,39 @@
     <h2 class="sr-only">
       Header
     </h2>
-    <div class="px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between py-2 h-(--header-height)">
-        <div class="flex items-center gap-x-3">
-          <div>
-            <Button
-              variant="ghost"
-              size="icon"
-              @click="toggleSidebar"
-            >
-              <Icon
-                name="lucide:panel-left"
-                class="text-xl size-5"
-                aria-hidden="true"
-              />
-              <span class="sr-only">Toggle Sidebar</span>
-            </Button>
-          </div>
-          <HeaderSearch />
-        </div>
-
-        <div class="flex items-center gap-x-3">
-          <HeaderNotifications />
-          <ColorModeButton />
-          <div class="h-6">
-            <Separator
-              :orientation="'vertical'"
+    <ContainerWrapper
+      container="fluid"
+      class="py-2 flex items-center justify-between h-(--header-height)"
+    >
+      <div class="flex items-center gap-x-3">
+        <div>
+          <Button
+            variant="ghost"
+            size="icon"
+            @click="toggleSidebar"
+          >
+            <Icon
+              name="lucide:panel-left"
+              class="text-xl size-5"
+              aria-hidden="true"
             />
-          </div>
-          <HeaderUserMenu />
+            <span class="sr-only">Toggle Sidebar</span>
+          </Button>
         </div>
+        <HeaderSearch />
       </div>
-    </div>
+
+      <div class="flex items-center gap-x-3">
+        <HeaderNotifications />
+        <ColorModeButton />
+        <div class="h-6">
+          <Separator
+            :orientation="'vertical'"
+          />
+        </div>
+        <HeaderUserMenu />
+      </div>
+    </ContainerWrapper>
   </header>
 </template>
 

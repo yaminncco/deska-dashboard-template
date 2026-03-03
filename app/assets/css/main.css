@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
+@custom-variant container-fluid (&:is(.container-fluid *));
+@custom-variant container-centered (&:is(.container-centered *));
 
 :root {
   --primary: var(--color-orange-500);

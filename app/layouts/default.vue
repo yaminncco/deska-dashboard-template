@@ -1,6 +1,9 @@
 <template>
   <SidebarProvider
-    class="relative md:[&:has([data-variant=inset])_main>header]:rounded-t-xl [--header-height:66px]"
+    :class="[
+      'relative md:[&:has([data-variant=inset])_main>header]:rounded-t-xl [--header-height:66px]',
+      container === 'centered' ? 'container-centered' : 'container-fluid',
+    ]"
     :default-open="defaultOpen"
     :style="{
       '--app-sidebar-accent': 'color-mix(in oklab, var(--accent) 60%, var(--background))',
@@ -35,4 +38,5 @@ const defaultOpen = useCookie<boolean>('sidebar:state')
 
 const color = ref<SidebarProps['color']>('background')
 const variant = ref<SidebarProps['variant']>('sidebar')
+const container = ref<'fluid' | 'centered'>('fluid')
 </script>

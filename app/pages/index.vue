@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-4 py-8 sm:px-6 lg:px-8">
+  <ContainerWrapper>
     <div class="mb-6 md:mb-8 flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
       <div>
         <h1 class="text-2xl font-bold tracking-tight md:text-3xl">
@@ -35,7 +35,7 @@
         <DashboardTopCountries />
       </div>
     </div>
-  </div>
+  </ContainerWrapper>
 </template>
 
 <script lang="ts" setup>
