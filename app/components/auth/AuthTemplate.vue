@@ -4,7 +4,7 @@
   >
     <BackgroundDots />
     <div class="absolute inset-x-0 top-0 px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between py-2 h-(--header-height)">
+      <div class="flex items-center justify-between py-2 h-16.5">
         <div />
         <div class="flex gap-1">
           <ColorModeButton />

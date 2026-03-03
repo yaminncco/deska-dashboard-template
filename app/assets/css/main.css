@@ -47,8 +47,6 @@
   --vis-primary-color: var(--primary);
   --vis-secondary-color: oklch(0.69 0.1481 162.37);
   --vis-text-color: var(--muted-foreground);
-
-  --header-height: 65px; 
 }
 
 .dark {
