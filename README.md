@@ -4,6 +4,7 @@ A dashboard template built with **Nuxt**, **Tailwind** and **Shadcn**.
 
 - [🚀 Live Demo](https://deska-dashboard.netlify.app)
 - [✨ Get Premium Version](https://ko-fi.com/s/146bbac151)
+- [📖 Documentation](https://deska-docs.netlify.app/)
 
 ![Deska dashboard template preview](https://deska-docs.netlify.app/og-banner.png)
 
